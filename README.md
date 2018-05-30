@@ -6,7 +6,7 @@ Run the following command:
 `npm install pagination-with-react`
 
 ## Usage
-
+  import { ReactPagination  } from 'pagination-with-react';
 # Props:
 ```
   totalItems [required]
@@ -22,6 +22,7 @@ Run the following command:
 # Basic Example
 
 ```
+  import { ReactPagination  } from 'pagination-with-react';
   <ReactPagination 
     totalScreensNumber={totalScreensNumber}
     totalNumberOfPages={totalNumberOfPages}

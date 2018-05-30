@@ -3,11 +3,18 @@
   "version": "0.1.1",
   "main": "dist/index.js",
   "module": "dist/index.js",
-  "files": [ "dist", "README.md" ],
+  "files": [
+    "dist",
+    "README.md"
+  ],
   "dependencies": {
     "classnames": "^2.2.5",
     "lodash.round": "^4.0.4",
-    "lodash.times": "^4.3.2"
+    "lodash.times": "^4.3.2",
+    "pagination-with-react": "^0.1.1",
+    "react": "^16.4.0",
+    "react-dom": "^16.4.0",
+    "react-scripts": "1.1.4"
   },
   "repository": {
     "type": "git",

@@ -4,8 +4,6 @@ import { ReactPagination  } from './lib';
 import registerServiceWorker from './registerServiceWorker';
 import round from 'lodash.round';
 
-import './index.css';
-
 class App extends React.Component{
   constructor(){
     super()

@@ -2,8 +2,6 @@ import React from 'react';
 import times from 'lodash.times';
 import classNames from 'classnames';
 
-import './ReactPagination.css';
-
 class ReactPagination extends React.Component {
   constructor(props) {
     super(props);
@@ -42,7 +40,7 @@ class ReactPagination extends React.Component {
         {children}
         <div className="buttons-container">
           <div>
-            { currentScreenNumber !== 1 && <button icon className="previous-btn" onClick={() => this.setState({ currentScreenNumber: this.state.currentScreenNumber - 1 })}> Previous </button> }
+            { currentScreenNumber !== 1 && <button className="previous-btn" onClick={() => this.setState({ currentScreenNumber: this.state.currentScreenNumber - 1 })}> Previous </button> }
             {
               times(currentNumberOfScreens, idx => (
                 <button
@@ -56,7 +54,7 @@ class ReactPagination extends React.Component {
                 </button>
               ))
             }
-            { currentScreenNumber < totalScreensNumber && <button icon className="next-btn" onClick={() => this.setState({ currentScreenNumber: this.state.currentScreenNumber + 1 })}> Next </button> }
+            { currentScreenNumber < totalScreensNumber && <button className="next-btn" onClick={() => this.setState({ currentScreenNumber: this.state.currentScreenNumber + 1 })}> Next </button> }
           </div>
         </div>
       </div>
