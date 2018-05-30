@@ -11,7 +11,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "URL_OF_YOUR_REPOSITORY"
+    "url": "https://github.com/avinashdvv/react-pagination"
   },
   "scripts": {
     "start": "react-scripts start",
