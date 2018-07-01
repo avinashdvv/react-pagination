@@ -12,16 +12,10 @@ class App extends React.Component{
     }
   }
   render() {
-    const totalItems = 500;
-    const numberOfItemsPerPage = 10;
-    const numberOfPagesPerScreen = 10;
-    const totalNumberOfPages = round(totalItems / numberOfItemsPerPage);
-    const totalScreensNumber = round(totalNumberOfPages / numberOfPagesPerScreen);
     return (
       <ReactPagination
-        totalScreensNumber={totalScreensNumber}
-        totalNumberOfPages={totalNumberOfPages}
-        numberOfPagesPerScreen={numberOfPagesPerScreen}
+        totalNumberOfPages={50}
+        numberOfPagesPerScreen={10}
         onPageButtonClick={(id) => {
           this.setState({
             id,

@@ -1,40 +1,65 @@
-##  pagination-with-react
+# Project Title
 
+React Pagination
 
-## Installation
-Run the following command:
-`npm install pagination-with-react`
+### Documentation
+Props
 
-## Usage
-  import { ReactPagination  } from 'pagination-with-react';
-# Props:
-```
-  totalItems [required]
-  numberOfItemsPerPage  [required]
-  numberOfPagesPerScreen [required]
-  totalNumberOfPages = round(totalItems / numberOfItemsPerPage); [required]
-  totalScreensNumber = round(totalNumberOfPages / numberOfPagesPerScreen); [required]
-  onPageButtonClick [required]
-  currentActiveIndex [required]
-
-```
-
-# Basic Example
+ Prop | Type
+---------|---------
+currentActiveIndex | Number
+children | children app
+numberOfPagesPerScreen| Number, How many pages numbers should user see per screen?
+totalNumberOfPages | Number, Total number of pages
+onPageButtonClick| Function, callback function for onClick pagination button to get the current page number
+prefix | String or React Component, if you want to add anything before pagination buttons
+suffix| String or React Component, if you want to add anything after pagination buttons
+icons | Object with keys `left, leftMost, right, rightMost `  if you want to change the icons of a arrow
 
 ```
-  import { ReactPagination  } from 'pagination-with-react';
-  <ReactPagination 
-    totalScreensNumber={totalScreensNumber}
-    totalNumberOfPages={totalNumberOfPages}
-    numberOfPagesPerScreen={numberOfPagesPerScreen}
-    onPageButtonClick={(data) => {
-      this.setState({
-        data,
-      })
-    }}
-    currentActiveIndex={this.state.id}
-  >
-    {this.state.data}
-  </ReactPagination>
+Icons Default Values
+icons: {
+  left: <span>&larr;</span>,
+  leftMost: <span>&#8647;</span>,
+  right: <span>&rarr;</span>,
+  rightMost: <span>&#8649;</span>,
+}
+```
+
+
+### Installing
+
+npm install pagination-with-react
+
+```
+import React from 'react';
+import ReactDOM from 'react-dom';
+import { ReactPagination  } from 'pagination-with-react';
+
+class App extends React.Component{
+  constructor(){
+    super()
+    this.state={
+      id: 1,
+    }
+  }
+  render() {
+    return (
+      <ReactPagination
+        totalNumberOfPages={50}
+        numberOfPagesPerScreen={10}
+        onPageButtonClick={(id) => {
+          this.setState({
+            id,
+          })
+          console.log(this.state)
+        }}
+        currentActiveIndex={this.state.id}
+      >
+        <h1>Children {this.state.id}</h1>
+      </ReactPagination>
+    )
+  }
+}
 
 ```
