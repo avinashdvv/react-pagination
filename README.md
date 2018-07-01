@@ -1,6 +1,4 @@
-# Project Title
-
-React Pagination
+# React Pagination
 
 ### Documentation
 Props
