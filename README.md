@@ -27,7 +27,9 @@ icons: {
 
 ### Installing
 
-`npm install pagination-with-react`
+```
+ npm install pagination-with-react
+```
 
 ```
 import React from 'react';
